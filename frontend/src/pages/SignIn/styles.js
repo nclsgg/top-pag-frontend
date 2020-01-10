@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import background from '../../assets/backgroundlogin.png';
 import backgroundmobile from '../../assets/backgroundmobile.png';
+import iconuser from '../../assets/iconuser.png';
+import iconpassword from '../../assets/iconpassword.png';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -92,7 +94,6 @@ export const Container1 = styled.div`
         color: #c4c4c4;
       }
       font-size: 15px;
-      background: #ffffff;
       box-shadow: 0px 10px 20px rgba(180, 185, 207, 0.2);
       border: none;
       border-radius: 7px;
@@ -119,6 +120,20 @@ export const Container1 = styled.div`
       @media (max-width: 360px) {
         width: 330px;
         height: 50px;
+      }
+    }
+
+    #email {
+      input {
+        background: url(${iconuser}) no-repeat #ffffff;
+        background-position: right 15px center;
+      }
+    }
+
+    #password {
+      input {
+        background: url(${iconpassword}) no-repeat #ffffff;
+        background-position: right 15px center;
       }
     }
 

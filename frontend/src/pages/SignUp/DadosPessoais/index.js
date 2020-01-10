@@ -2,12 +2,10 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Input } from '@rocketseat/unform';
+import { Form, Input, Check } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
-import { Wrapper, Container, FooterForm, Formulario } from './styles';
-
-import ellipseO1 from '../../../assets/EllipseO1.png';
+import { Wrapper, Container, FooterForm, Formulario, Circle } from './styles';
 
 const schema = Yup.object().shape({
   nome: Yup.string().required('Campo obrigatório'),
@@ -15,8 +13,16 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .email('Insira um e-mail válido')
     .required('Campo obrigatório'),
-  telefone: Yup.string().required('Campo obrigatório'),
-  cpf: Yup.string().required('Campo Obrigatório'),
+  telefone: Yup.number()
+    .typeError('Insira somente números')
+    .integer('Insira somente números')
+    .min(9, 'Número de telefone inválido')
+    .required('Campo obrigatório'),
+  cpf: Yup.number()
+    .typeError('Insira somente números')
+    .integer('Insira somente números')
+    .min(11, 'CPF inválido')
+    .required('Campo Obrigatório'),
   senha: Yup.string().required('Campo obrigatório'),
   confirmarSenha: Yup.string()
     .required('Campo obrigatório')
@@ -29,7 +35,9 @@ function DadosPessoais({ action, handleValue }) {
       <Container>
         <Formulario>
           <div id="title">
-            <img src={ellipseO1} alt="ellipse" />
+            <Circle id="active">
+              <span>1</span>
+            </Circle>
             <div id="ellipse">
               <h1>Dados Pessoais</h1>
             </div>
@@ -97,7 +105,7 @@ function DadosPessoais({ action, handleValue }) {
             <FooterForm>
               <p>* Campos marcados com este ícone são obrigatórios</p>
               <div id="termo">
-                <input type="checkbox" name="termos" />
+                <Check name="termos" />
                 <i>Aceitar os termos</i>
               </div>
               <button type="submit">CONTINUAR CADASTRO</button>

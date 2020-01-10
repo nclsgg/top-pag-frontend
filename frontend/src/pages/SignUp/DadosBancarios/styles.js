@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-
-import obrigatorio from '../../../assets/obrigatorio.png';
+import seta from '../../../assets/seta.png';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -36,7 +35,7 @@ export const Container = styled.div`
 
   #formDiv {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -74,40 +73,55 @@ export const Container = styled.div`
       margin-left: 0px;
     }
 
-    #formCPF {
-      input {
-        min-width: 98%;
-
-        @media (max-width: 1024px) {
-          min-width: 96%;
-        }
-
-        @media (max-width: 568px) {
-          width: 330px;
-        }
-      }
-    }
-
     input {
       ::placeholder {
         color: #c4c4c4;
       }
       font-size: 15px;
-      background: url(${obrigatorio}) no-repeat #ffffff;
-      background-position: right 15px center;
-
+      background: #ffffff;
       box-shadow: 0px 10px 20px rgba(180, 185, 207, 0.2);
       border: none;
       border-radius: 7px;
       height: 60px;
-      width: 498px;
+      width: 800px;
       text-indent: 15px;
       margin-bottom: 20px;
       margin-left: 20px;
+
       @media (max-width: 1024px) {
-        width: 700px;
-        height: 70px;
+        width: 500px;
+        height: 50px;
+        margin-left: 0px;
       }
+
+      @media (max-width: 568px) {
+        width: 330px;
+        height: 50px;
+        margin-left: 0px;
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url(${seta}) no-repeat #ffffff;
+      background-position: right 15px center;
+      padding: 13px 20px 13px 12px;
+
+      ::placeholder {
+        color: #c4c4c4;
+      }
+
+      font-size: 15px;
+      box-shadow: 0px 10px 20px rgba(180, 185, 207, 0.2);
+      border-radius: 7px;
+      border: none;
+      height: 60px;
+      width: 800px;
+      text-indent: 15px;
+      margin-bottom: 20px;
+      margin-left: 20px;
 
       @media (max-width: 1024px) {
         width: 500px;
@@ -159,63 +173,24 @@ export const FooterForm = styled.div`
     align-items: center;
   }
 
-  button {
-    font-weight: bold;
-    font-size: 15px;
-    color: #ffff;
-    letter-spacing: 0.15em;
-    width: 250px;
-    height: 54px;
-    background: #d97035;
-    border-radius: 7px;
-    border: none;
-    margin-bottom: 40px;
-
-    &:hover {
-      background: ${darken(0.03, '#d97035')};
-    }
+  #step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     @media (max-width: 1024px) {
-      width: 200px;
-    }
-
-    @media (max-width: 1024px) {
-      margin-bottom: 10px;
-      width: 330px;
+      align-items: center;
     }
   }
 
   p {
     margin-left: 20px;
-    color: #c4c4c4;
+    color: #6b6e70;
     margin-bottom: 40px;
 
     @media (max-width: 1024px) {
       margin-left: 0px;
-      margin-bottom: 10px;
-    }
-  }
-
-  #termo {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    margin-left: 200px;
-    align-items: center;
-
-    @media (max-width: 1024px) {
-      margin-left: 0px;
-      margin-bottom: 0px;
-    }
-
-    input[type='checkbox'] {
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
-    }
-
-    i {
-      font-style: normal;
-      color: #737fa9;
+      margin-bottom: 35px;
     }
   }
 `;
@@ -260,6 +235,57 @@ export const Formulario = styled.div`
         margin-left: 0px;
       }
     }
+  }
+`;
+
+export const BtnCadastro = styled.button`
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffff;
+  letter-spacing: 0.15em;
+  width: 250px;
+  height: 54px;
+  background: #d97035;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 40px;
+
+  &:hover {
+    background: ${darken(0.03, '#d97035')};
+  }
+
+  @media (max-width: 1024px) {
+    width: 200px;
+  }
+
+  @media (max-width: 1024px) {
+    margin-bottom: 10px;
+    width: 330px;
+  }
+`;
+
+export const BtnStep = styled.button`
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffff;
+  letter-spacing: 0.15em;
+  width: 30px;
+  height: 30px;
+  background: #d97035;
+  border-radius: 100px;
+  border: none;
+  margin-bottom: 40px;
+  margin-left: 5px;
+
+  &:hover {
+    background: ${darken(0.03, '#d97035')};
+  }
+
+  @media (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 35px;
   }
 `;
 

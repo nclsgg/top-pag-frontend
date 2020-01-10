@@ -53,8 +53,12 @@ export default function SignIn() {
         <Logo src={logo} alt="logo" />
         <div>
           <Form schema={schema} onSubmit={handleSubmit}>
-            <Input name="email" type="email" placeholder="Email" />
-            <Input name="password" type="password" placeholder="Senha" />
+            <div id="email">
+              <Input name="email" type="email" placeholder="Email" />
+            </div>
+            <div id="password">
+              <Input name="password" type="password" placeholder="Senha" />
+            </div>
             <FooterForm>
               <p>
                 Esqueceu sua senha? <Link to="/pagerecover">clique aqui</Link>

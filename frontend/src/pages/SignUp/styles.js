@@ -5,4 +5,10 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    overflow: scroll;
+    min-height: 100%;
+  }
 `;

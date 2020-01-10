@@ -28,6 +28,29 @@ export function* signIn({ payload }) {
   }
 }
 
+export function* signUp({ payload }) {
+  try {
+    const { firstName, lastName, email, phone, cpf, password } = payload;
+
+    yield call(api.post, 'users', {
+      firstName,
+      lastName,
+      email,
+      phone,
+      cpf,
+      password,
+    });
+
+    toast.success('Cadastro realizado com sucesso.');
+
+    history.push('/');
+  } catch (err) {
+    toast.error('Falha no cadastro, verifique seus dados!');
+
+    yield put(signFailure());
+  }
+}
+
 export function setToken({ payload }) {
   if (!payload) return;
 
@@ -41,4 +64,5 @@ export function setToken({ payload }) {
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
+  takeLatest('@auth/SIGN_UP_REQUEST', signUp),
 ]);
