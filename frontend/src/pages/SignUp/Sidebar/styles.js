@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../styles/global';
 
 export const Container = styled.div`
   display: flex;
@@ -59,7 +60,7 @@ export const Navigator = styled.div`
     display: flex;
 
     p {
-      color: #d97035;
+      color: ${colors.Orange};
       font-size: 18px;
       margin-left: 10px;
     }
@@ -96,7 +97,7 @@ export const Navigator = styled.div`
         display: none;
       }
       p {
-        color: #737fa9;
+        color: ${colors.Grey};
         width: 135px;
       }
     }
@@ -109,20 +110,20 @@ export const Circle = styled.section`
   justify-content: center;
   height: 40px;
   width: 40px;
-  border: 3px solid #737fa9;
+  border: 3px solid ${colors.Grey};
   border-radius: 100px;
 
   span {
-    color: #737fa9;
+    color: ${colors.Grey};
     font-weight: 500;
     font-size: 1.4rem;
   }
 
   &&.active {
-    border-color: #d97035;
+    border-color: ${colors.Orange};
 
     span {
-      color: #d97035;
+      color: ${colors.Orange};
     }
   }
 `;

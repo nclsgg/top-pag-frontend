@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { colors } from '../../../styles/global';
 
 export const Container1 = styled.div`
   font-family: Ubuntu;
@@ -94,12 +95,12 @@ export const FooterForm = styled.div`
     letter-spacing: 0.15em;
     width: 300px;
     height: 54px;
-    background: #d97035;
+    background: ${colors.Orange};
     border-radius: 7px;
     border: none;
 
     &:hover {
-      background: ${darken(0.03, '#d97035')};
+      background: ${darken(0.03, colors.Orange)};
     }
 
     @media (max-width: 1024px) {
@@ -125,7 +126,7 @@ export const FooterForm = styled.div`
 
   a {
     text-decoration: none;
-    color: #d97035;
+    color: ${colors.Orange};
     opacity: 0.8;
 
     &:hover {

@@ -16,7 +16,7 @@ export default function Routes() {
       <Route path="/pagerecover" component={PageRecover} />
       <Route path="/recover" component={PassRecover} />
 
-      <Route path="/main" component={Main} isPrivate />
+      <Route path="/main" component={Main} />
     </Switch>
   );
 }

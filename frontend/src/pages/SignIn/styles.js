@@ -4,6 +4,7 @@ import background from '../../assets/backgroundlogin.png';
 import backgroundmobile from '../../assets/backgroundmobile.png';
 import iconuser from '../../assets/iconuser.png';
 import iconpassword from '../../assets/iconpassword.png';
+import { colors } from '../../styles/global';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -171,12 +172,12 @@ export const FooterForm = styled.div`
     letter-spacing: 0.15em;
     width: 150px;
     height: 54px;
-    background: #d97035;
+    background: ${colors.Orange};
     border-radius: 7px;
     border: none;
 
     &:hover {
-      background: ${darken(0.03, '#d97035')};
+      background: ${darken(0.03, colors.Orange)};
     }
 
     @media (max-width: 1024px) {
@@ -210,7 +211,7 @@ export const FooterForm = styled.div`
 
   a {
     text-decoration: none;
-    color: #d97035;
+    color: ${colors.Orange};
     opacity: 0.8;
 
     &:hover {
@@ -368,13 +369,13 @@ export const Container2 = styled.div`
         margin-top: 50px;
         width: 300px;
         height: 60px;
-        background: #d97035;
+        background: ${colors.Orange};
         border-radius: 7px;
         color: #ffffff;
         border: none;
 
         &:hover {
-          background: ${darken(0.03, '#d97035')};
+          background: ${darken(0.03, colors.Orange)};
         }
 
         @media (max-width: 1024px) {
@@ -423,13 +424,13 @@ export const Button = styled.button`
   margin-top: 50px;
   width: 300px;
   height: 60px;
-  background: #d97035;
+  background: ${colors.Orange};
   border-radius: 7px;
   color: #ffffff;
   border: none;
 
   &:hover {
-    background: ${darken(0.03, '#d97035')};
+    background: ${darken(0.03, colors.Orange)};
   }
 
   @media (max-width: 1024px) {

@@ -2,6 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 
 import 'react-toastify/dist/ReactToastify.css';
 
+export const colors = {
+  Orange: '#d97035',
+  Grey: '#737fa9',
+  Background: '#F5F6FA',
+  LightGrey: '#C4C4C4',
+};
+
 export default createGlobalStyle`
 * {
     margin: 0;
