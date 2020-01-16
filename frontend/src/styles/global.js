@@ -7,6 +7,14 @@ export const colors = {
   Grey: '#737fa9',
   Background: '#F5F6FA',
   LightGrey: '#C4C4C4',
+  DarkGrey: '#6B6E70',
+  DarkBlue: '#253958',
+  LightBlue: '#C8EDF9',
+  Blue: '#3588C4',
+};
+
+export const fonts = {
+  Default: '12px',
 };
 
 export default createGlobalStyle`

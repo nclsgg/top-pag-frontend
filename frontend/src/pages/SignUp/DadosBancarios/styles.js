@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 import seta from '../../../assets/seta.png';
+import { colors, fonts } from '../../../styles/global';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -144,15 +145,15 @@ export const Container = styled.div`
     flex-direction: row;
 
     p {
-      font-size: 12px;
+      font-size: ${fonts.Default};
       color: #6b6e70;
     }
 
     a {
       text-decoration: none;
       margin-left: 5px;
-      font-size: 12px;
-      color: #d97035;
+      font-size: ${fonts.Default};
+      color: ${colors.Orange};
     }
   }
 `;
@@ -226,7 +227,7 @@ export const Formulario = styled.div`
       margin-left: 10px;
       font-size: 32px;
       line-height: 37px;
-      color: #d97035;
+      color: ${colors.Orange};
 
       @media (max-width: 1024px) {
         font-size: 28px;
@@ -245,7 +246,7 @@ export const BtnCadastro = styled.button`
   letter-spacing: 0.15em;
   width: 250px;
   height: 54px;
-  background: #d97035;
+  background: ${colors.Orange};
   border-radius: 7px;
   border: none;
   margin-bottom: 40px;
@@ -272,7 +273,7 @@ export const BtnStep = styled.button`
   letter-spacing: 0.15em;
   width: 30px;
   height: 30px;
-  background: #d97035;
+  background: ${colors.Orange};
   border-radius: 100px;
   border: none;
   margin-bottom: 40px;
@@ -295,11 +296,11 @@ export const Circle = styled.section`
   justify-content: center;
   height: 40px;
   width: 40px;
-  border: 3px solid #d97035;
+  border: 3px solid ${colors.Orange};
   border-radius: 100px;
 
   span {
-    color: #d97035;
+    color: ${colors.Orange};
     font-weight: 500;
     font-size: 1.4rem;
   }

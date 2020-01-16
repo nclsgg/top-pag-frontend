@@ -17,50 +17,46 @@ import DepositIcon from '../../../assets/Deposit.png';
 import Indicator from '../../../assets/Indicator.png';
 
 export default function Sidebar() {
-  function clicked() {
-    console.log('Clicou');
-  }
-
   return (
     <Wrapper>
       <ContainerLogo>
         <Logo src={logo} />
         <div id="profileDisplay">
-          <Avatar src={avatar} onClick={clicked} />
+          <Avatar src={avatar} />
           <Link to="/main">Nicolas Guadagno</Link>
         </div>
       </ContainerLogo>
       <Container>
         <div id="pages">
-          <div id="sections" onClick={clicked}>
+          <div id="sections">
             <img src={DashboardIcon} alt="Dashboard" />
             <p>DASHBOARD</p>
             <div id="indicator">
               <img src={Indicator} alt="Indicator" />
             </div>
           </div>
-          <div id="sections" onClick={clicked}>
+          <div id="sections">
             <img src={DepositIcon} alt="Dashboard" />
             <p>DEPOSITAR</p>
             <div id="indicator">
               <img src={Indicator} alt="Indicator" />
             </div>
           </div>
-          <div id="sections" onClick={clicked}>
+          <div id="sections">
             <img src={CashoutIcon} alt="Dashboard" />
             <p>SACAR</p>
             <div id="indicator">
               <img src={Indicator} alt="Indicator" />
             </div>
           </div>
-          <div id="sections" onClick={clicked}>
+          <div id="sections">
             <img src={HistoryIcon} alt="Dashboard" />
             <p>HISTÓRICO</p>
             <div id="indicator">
               <img src={Indicator} alt="Indicator" />
             </div>
           </div>
-          <div id="sections" onClick={clicked}>
+          <div id="sections">
             <img src={ProfileIcon} alt="Dashboard" />
             <p>PERFIL</p>
             <div id="indicator">

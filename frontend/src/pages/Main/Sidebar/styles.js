@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import { colors } from '../../../styles/global';
+import { colors, fonts } from '../../../styles/global';
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: #ffffff;
   min-height: 100%;
+
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
 
   #logout {
     position: fixed;
@@ -48,7 +52,7 @@ export const ContainerLogo = styled.div`
 
     a {
       color: ${colors.Grey};
-      font-size: 12px;
+      font-size: ${fonts.Default};
       font-weight: bold;
       margin-top: 5px;
 

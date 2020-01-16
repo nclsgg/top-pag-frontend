@@ -4,7 +4,7 @@ import background from '../../assets/backgroundlogin.png';
 import backgroundmobile from '../../assets/backgroundmobile.png';
 import iconuser from '../../assets/iconuser.png';
 import iconpassword from '../../assets/iconpassword.png';
-import { colors } from '../../styles/global';
+import { colors, fonts } from '../../styles/global';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -349,12 +349,12 @@ export const Container2 = styled.div`
         }
 
         @media (max-width: 768px) {
-          font-size: 12px;
+          font-size: ${fonts.Default};
           width: 200px;
         }
 
         @media (max-width: 568px) {
-          font-size: 12px;
+          font-size: ${fonts.Default};
           width: 200px;
         }
 

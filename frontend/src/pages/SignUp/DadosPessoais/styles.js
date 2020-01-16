@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { colors } from '../../../styles/global';
+import { colors, fonts } from '../../../styles/global';
 
 import obrigatorio from '../../../assets/obrigatorio.png';
 
@@ -131,14 +131,14 @@ export const Container = styled.div`
     flex-direction: row;
 
     p {
-      font-size: 12px;
+      font-size: ${fonts.Default};
       color: #6b6e70;
     }
 
     a {
       text-decoration: none;
       margin-left: 5px;
-      font-size: 12px;
+      font-size: ${fonts.Default};
       color: ${colors.Orange};
     }
   }
